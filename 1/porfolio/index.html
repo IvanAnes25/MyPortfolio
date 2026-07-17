@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a4767496e2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Erica+One&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./build/style.css" rel="stylesheet">
+    <title>MyPortfolio</title>
+</head>
+<body class="bg-black h-screen text-gray-300 scroll-smooth font-sans ">
+
+    <nav class="bg-black/40 backdrop-blur-md fixed top-0 left-0 w-full z-50 flex border-b-2 border-gray-800 justify-between md:justify-evenly items-center px-7 p-[10px] md:p-[5px] bg-black">
+
+        <div class="font-bold font-favorit text-white">
+            <a href="#home">S.I.A</a>
+        </div>
+
+        <div>
+           <ul id="nav-links" class="h-10 gap-5 items-center text-[14px] font-semibold hidden md:flex relative">
+                <li><a data-section="home" class="nav-link transition-all hover:duration-700 focus:duration-75 hover:text-[15px] hover:font-bold focus:text-rose-700" href="#home">Home</a></li>
+                <li><a data-section="project" class="nav-link transition-all hover:duration-700 focus:duration-75 hover:text-[15px] hover:font-bold focus:text-rose-700" href="#project">Projects</a></li>
+                <li><a data-section="skill" class="nav-link transition-all hover:duration-700 focus:duration-75 hover:text-[15px] hover:font-bold focus:text-rose-700" href="#skill">Skills/Style</a></li>
+                <li><a data-section="contact" class="nav-link transition-all hover:duration-700 focus:duration-75 hover:text-[15px] hover:font-bold focus:text-rose-700" href="#contact">Contact</a></li>
+                <span id="nav-underline" class="absolute bottom-0 h-[2px] bg-orange-600 rounded transition-all duration-300 ease-out"></span>
+            </ul>
+        </div>
+
+        <div class="flex gap-4 text-white">
+            <div class="md:hidden hover:text-white">
+                <button id="hamburger-btn" onclick="hamburger()">
+                    <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="animate-bounce text-2xl">
+                🎃
+            </div>
+        </div>
+
+        <ul id="mobile-menu" class="absolute top-full right-[40px] w-[70%] max-w-xs bg-black/80 bg-black backdrop-blur-md border border-orange-800 rounded-xl flex-col items-center gap-4 py-5 text-[12px] font-semibold z-50 shadow-lg">            
+            <li><a data-section="home" class="nav-link mobile-link transition-all duration-700 hover:text-[15px] hover:font-bold" href="#home">Home</a></li>
+            <li><a data-section="project" class="nav-link mobile-link transition-all duration-700 hover:text-[15px] hover:font-bold" href="#project">Projects</a></li>
+            <li><a data-section="skill" class="nav-link mobile-link transition-all duration-700 hover:text-[15px] hover:font-bold" href="#skill">Skills/Style</a></li>
+            <li><a data-section="contact" class="nav-link mobile-link transition-all duration-700 hover:text-[15px] hover:font-bold" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="flex items-center justify-center min-h-[calc(100vh-64px)]">
+
+            <div class="grid grid-cols-1 justify-center md:grid-cols-2 pt-[70px] md:pt-[68px] gap-12 px-6 md:px-10 items-center max-w-6xl mx-auto">
+
+                <!-- TEXT -->
+                <div class="order-2 md:order-1 space-y-6 text-center md:text-left max-w-md mx-auto md:mx-0" data-aos="fade-up">
+                    <p class="text-xs text-gray-500 tracking-[0.3em] uppercase">
+                        <span><i class="fa-solid fa-circle text-green-600 text-[7px] pb-[2px]"></i></span> You're looking at
+                    </p>
+
+                    <div class="font-bevan font-bold">
+                        <h1 class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
+                        When 
+                        <span class="gradient-text glow animate-pulse transition-all duration-75">Tech</span><br>
+                        breathes 
+                        <span class="gradient-text glow animate-pulse transition-all duration-75">Artistry</span>
+                    </h1>
+
+                    </div>
+                    <h3 class="text-xl text-gray-400 font-heading">
+                        Hi! i am <span class="font-bold">Sonn Ivan Añes</span>
+                    </h3>
+
+                    <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-md">
+                        A third-year BSIT student aspiring to be a web developer,
+                        blending creativity with technical skill to craft seamless 
+                        digital experiences, while diving deep into both front-end
+                        and back-end development to build systems that are efficient,
+                        modern, and truly user-centered.
+                    </p>
+
+                    <div class="icons flex gap-5 justify-center md:justify-start">
+                        <a href="https://github.com/IvanAnes25" target="_blank" >
+                        <!--Github-->
+                        <i class="fa-brands fa-github text-lg hover:text-indigo-900 hover:scale-125 transition-all duration-500"></i>
+                        </a>
+
+                        <a href="mailto:anesivan21@gmail.com" target="_blank">
+
+                            <!-- Email -->
+                            <i class="fa-solid fa-envelope text-lg hover:scale-125 transition-all duration-500"></i>
+
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sonn-ivan-anes-ba2587381/" target="_blank">
+                            <!-- LinkedIn -->
+                            <i class="fa-brands fa-linkedin text-lg  hover:text-blue-600 hover:scale-125 transition-all duration-500"></i>
+
+                        </a>
+
+                        <a href="https://www.facebook.com/sonnivan.anes/" target="_blank">
+                            <!-- Facebook -->
+                            <i class="fa-brands fa-facebook text-lg  hover:text-blue-500 hover:scale-125 transition-all duration-500"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/devian_3253/ " target="_blank" >
+                            <!-- Instagram -->
+                            <i class="fa-brands fa-instagram text-lg hover:text-rose-700 hover:scale-125 transition-all duration-500"></i>
+
+                        </a>
+                    </div>
+
+                    <div>
+                        <button class="w-[110px] h-[30px] md:w-[110px] md:h-[30px] rounded-md border border-red-700 hover:text-blue-400 hover:border-orange-800 transition-all duration-500 animate-bounce">
+                            <a href="#contact " class="text-gray-400">Hire me</a>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="order-1 md:order-2 flex justify-center" data-aos="zoom-in">
+                    <img src="pic.jpg" alt="" 
+                        class="h-[180px] md:h-[260px] w-[200px] md:w-auto rounded-2xl shadow-lg hover:scale-105 transition duration-700">
+                </div>
+
+                
+            </div>
+
+        </section>
+
+
+
+
+        <!--Projects-->
+        <section id="project" class="">
+            <div class="flex items-center justify-center px-10 sm:mt-[40px] md:mt-[53px] lg:px-10" data-aos="fade-up">
+                <div class="max-w-4xl mx-auto">
+
+                <h1 class="text-2xl sm:text-4xl md:text-3xl font-bold text-center mb-10 mt-[55px]">
+                    <span><i class="fa-solid fa-book-open-reader"></i></span> My Projects
+                </h1>
+
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 text-[13px] text-gray-300">
+
+                    <!-- Card 1 -->
+                    <div class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex flex-col items-center gap-3">
+                    <!-- Image -->
+                    <div class="w-28 h-28">
+                        <img src="image.png" alt="Project preview" class="w-full h-full object-cover rounded hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-center space-y-2">
+                        <h2 class="text-base font-bold">WALA PA KASI MAHINA AKONG NILALANG</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam magni laboriosam aperiam debitis esse reprehenderit quas.
+                        </p>
+                    </div>
+                    <!-- Tech Stack -->
+                    <div class="flex gap-2 text-xs font-semibold text-white">
+                        <span class="rounded-xl border border-orange-200 py-1 px-3 text-[12px] hover:text-orange-500 hover:border-orange-800 transition-all duration-500">HTML</span>
+                        <span class="rounded-xl border border-orange-200 py-1 px-3 text-[12px] hover:text-yellow-400 hover:border-orange-800 transition-all duration-500">JavaScript</span>
+                        <span class="rounded-xl border border-orange-200 py-1 px-3 text-[12px] hover:text-blue-700 hover:border-orange-800 transition-all duration-500">TailwindCSS</span>
+                    </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex flex-col items-center gap-3">
+                    <!-- Image -->
+                    <div class="w-28 h-28">
+                        <img src="image.png" alt="Project preview" class="w-full h-full object-cover rounded hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Text -->
+                    <div class="text-center space-y-2">
+                        <h2 class="text-base font-bold">WALA PA KASI MAHINA AKONG NILALANG</h2>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam magni laboriosam aperiam debitis esse reprehenderit quas.
+                        </p>
+                    </div>
+                    <!-- Tech Stack -->
+                    <div class="flex gap-2 text-xs font-semibold text-white">
+                        <span class="rounded-xl border border-orange-200 py-1 px-3 text-[12px] hover:text-blue-700 hover:border-orange-800 transition-all duration-500">Python</span>
+                        <span class="rounded-xl border border-orange-200 py-1 px-3 text-[12px] hover:text-gray-400 hover:border-orange-800 transition-all duration-500">Flask</span>
+                    </div>
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+            <!--Skills Section-->
+        <section id="skill" class="py-16 px-6 md:px-10 md:mt-[200px]">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+
+                <!-- Section Title -->
+                <div class="flex items-center gap-3 mb-10 justify-center">
+                    <span class="w-1.5 h-7 rounded gradient-bar"></span>
+                    <h1 class="text-2xl md:text-3xl font-bold text-white "><span><i class="fa-brands fa-buffer"></i></span> Technical Arsenal</h1>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
+
+                    <!-- Frontend -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-code text-white"></i>
+                            <h2 class="text-lg font-bold text-white">Frontend</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="skill-tag text-green-200 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-react"></i></span>
+                            <span class="skill-tag text-orange-500 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-html5"></i></span>
+                            <span class="skill-tag text-blue-500 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-css3"></i></span>
+                            <span class="skill-tag text-blue-400 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-tailwind-css"></i></span>
+                            <span class="skill-tag text-yellow-500 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-js"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-gear"></i>
+                            <h2 class="text-lg font-bold text-white">Backend</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="skill-tag text-blue-500 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-python"></i></span>
+                            <span class="skill-tag text-yellow-500 rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-js"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-database text-white"></i>
+                            <h2 class="text-lg font-bold text-white">Database</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start ">
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">XAMPP</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h2 class="text-lg font-bold text-white">Tools</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-git-alt text-orange-700"></i> Git</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]"><i class="fa-brands fa-github text-purple-900"></i> GitHub</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">VS Code</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">OpenAI</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Working Style Section-->
+        <section id="working-style" class=" px-6 md:px-10">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+
+                <!-- Section Title -->
+                <div class="flex items-center gap-3 mb-10 justify-center">
+                    <span class="w-1.5 h-7 rounded gradient-bar"></span>
+                    <h1 class="text-2xl md:text-3xl font-bold text-white"><span><i class="fa-solid fa-compass"></i></span> Working Style</h1>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
+
+                    <!-- Learning Style -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-book text-white"></i>
+                            <h2 class="text-lg font-bold text-white">Learning Style</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Curious</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Still Learning</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Open to Feedback</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Trial and Error</span>
+                        </div>
+                    </div>
+
+                    <!-- Work Ethics -->
+                    <div class="border border-gray-800 rounded-xl p-5 bg-white/[0.02] hover:border-gray-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-700">
+                        <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                            <i class="fa-solid fa-fire text-white"></i>
+                            <h2 class="text-lg font-bold text-white">Work Ethics</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Time Management</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Consistent</span>
+                            <span class="skill-tag rounded-xl border border-orange-200 py-1 px-3 text-[12px]">Self-Taught</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Contact Section-->
+
+       <!--Contact Section-->
+        <section id="contact" class="flex items-center justify-center px-10 pb-10 md:min-h-screen sm:mt-[40px] md:mt-0 lg:px-10">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+
+                <h1 class="text-2xl sm:text-4xl md:text-3xl font-bold text-center mb-4 mt-[55px] md:mt-0">
+                    <span><i class="fa-solid fa-envelope"></i></span> Let's Connect
+                </h1>
+
+                <p class="text-center text-[13px] text-gray-400 max-w-md mx-auto mb-10">
+                    Not accepting any work yet — mahina pa akong nilalang, still practicing to be good. But feel free to reach out! 😅
+                </p>
+
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 text-[13px] text-gray-300">
+
+                    <a href="mailto:anesivan21@gmail.com" target="_blank"
+                        class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex items-center gap-3 hover:scale-105 transition-all duration-500  hover:shadow-[0_0_18px_rgba(255,255,255,0.3)]">
+                        <i class="fa-solid fa-envelope text-lg "></i>
+                        <div>
+                            <p class="text-xs text-gray-500">Email</p>
+                            <p class="font-bold">anesivan21@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/IvanAnes25" target="_blank"
+                        class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex items-center gap-3 hover:scale-105 transition-all duration-500">
+                        <i class="fa-brands fa-github text-lg"></i>
+                        <div>
+                            <p class="text-xs text-gray-500">GitHub</p>
+                            <p class="font-bold">IvanAnes25</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/sonn-ivan-anes-ba2587381/" target="_blank"
+                        class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex items-center gap-3 hover:scale-105 transition-all duration-500">
+                        <i class="fa-brands fa-linkedin text-lg"></i>
+                        <div>
+                            <p class="text-xs text-gray-500">LinkedIn</p>
+                            <p class="font-bold">Sonn Ivan Añes</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/sonnivan.anes/" target="_blank"
+                        class="border border-gray-300 rounded-lg p-4 shadow-[0_0_18px_rgba(255,255,255,0.3)] flex items-center gap-3 hover:scale-105 transition-all duration-500">
+                        <i class="fa-brands fa-facebook text-lg"></i>
+                        <div>
+                            <p class="text-xs text-gray-500">Facebook</p>
+                            <p class="font-bold">sonnivan.anes</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+
+        <footer class="border-t border-gray-800 py-6 px-10 text-center">
+            <div class="flex justify-center gap-5 mb-3 text-gray-400">
+                <a href="https://github.com/IvanAnes25" target="_blank"><i class="fa-brands fa-github hover:text-white transition-all duration-500 "></i></a>
+                <a href="mailto:anesivan21@gmail.com" target="_blank"><i class="fa-solid fa-envelope hover:text-white transition-all duration-500"></i></a>
+                <a href="https://www.linkedin.com/in/sonn-ivan-anes-ba2587381/" target="_blank"><i class="fa-brands fa-linkedin hover:text-blue-500 transition-all duration-500"></i></a>
+                <a href="https://www.facebook.com/sonnivan.anes/" target="_blank"><i class="fa-brands fa-facebook hover:text-blue-500 transition-all duration-500"></i></a>
+                <a href="https://www.instagram.com/devian_3253/" target="_blank"><i class="fa-brands fa-instagram hover:text-rose-500 transition-all duration-500"></i></a>
+            </div>
+            <p class="text-[10px] text-gray-500">© 2026 Sonn Ivan Añes. Good luck din sayo!</p>
+            <p class="text-[10px] text-gray-500"><i class="fa-solid fa-circle text-orange-300 text-[7px] pb-[2px]"></i> Made with HTML Tailwind JS and a little bit of <i class="fa-solid fa-heart text-red-500"></i></p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
